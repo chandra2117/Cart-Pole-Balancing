@@ -16,21 +16,21 @@ Objective: Maximize total reward by learning an optimal policy that keeps the po
 ## MONTE CARLO CONTROL ALGORITHM FOR CART POLE BALANCING
 The Monte Carlo (MC) control algorithm estimates the optimal action-value function Q(s, a) using returns averaged across episodes and improves the policy using ε-greedy exploration.
 
-#### Steps Involved
-###### Initialize
+### Steps Involved
+#### Initialize
 
 Q(s, a) arbitrarily (e.g., zeros)
 π(s): ε-greedy policy w.r.t. Q(s, a)
-###### For each episode
+#### For each episode
 
 Generate an episode: sequence of (state, action, reward)
 Compute returns G_t for each (s, a)
-###### Update Q-values [ Q(s,a) = Q(s,a) + \alpha [G_t - Q(s,a)] ]
+#### Update Q-values [ Q(s,a) = Q(s,a) + \alpha [G_t - Q(s,a)] ]
 
-###### Policy Improvement
+#### Policy Improvement
 
 Make π(s) greedy w.r.t. updated Q(s, a)
-##### Repeat until convergence.
+### Repeat until convergence.
 
 ## MONTE CARLO CONTROL FUNCTION
 
